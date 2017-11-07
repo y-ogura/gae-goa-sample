@@ -1,0 +1,52 @@
+consumes:
+- application/json
+- application/xml
+- application/gob
+- application/x-gob
+definitions:
+  Example:
+    description: Example (default view)
+    example:
+      message: Quos repellat temporibus quo optio.
+    properties:
+      message:
+        description: message
+        example: Quos repellat temporibus quo optio.
+        type: string
+    title: 'Mediatype identifier: application/vnd.example+json; view=default'
+    type: object
+host: localhost:8080
+info:
+  description: GAE goa サンプル
+  title: gae-goa-sample
+  version: ""
+paths:
+  /hello:
+    get:
+      description: HelloWorld
+      operationId: hello#HelloWorld
+      produces:
+      - application/vnd.example+json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Example'
+        "404":
+          description: Not Found
+      schemes:
+      - http
+      summary: HelloWorld hello
+      tags:
+      - hello
+produces:
+- application/json
+- application/xml
+- application/gob
+- application/x-gob
+responses:
+  NotFound:
+    description: Not Found
+schemes:
+- http
+swagger: "2.0"

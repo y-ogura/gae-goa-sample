@@ -1,0 +1,15 @@
+package: github.com/y-ogura/gae-goa-sample
+import:
+- package: github.com/goadesign/goa
+  version: 1.2.0
+  vcs: git
+  subpackages:
+  - client
+  - cors
+  - design
+  - design/apidsl
+  - goatest
+  - middleware
+  - uuid
+
+
